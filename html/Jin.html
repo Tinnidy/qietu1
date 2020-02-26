@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale= 1, user-scalable=no">    <!--宽度等于设备宽度-->
+		<title>金十页面</title>
+		<script type="text/javascript" src="../JS/mock.js"></script>
+		<link type="text/css"  href="../CSS/JIn10.css" rel="stylesheet" media="only screen and (min-width:768px) and (max-width:1920px)">
+		<link type="text/css"  href="../CSS/jin1.css" rel="stylesheet" media="only screen and (max-width:767px)">
+		
+		
+	</head>
+	<body>
+		<style>
+			.scwrap-container .sc-list .sclt-item .scitem-right .scitem-action>a:hover,
+			.scwrap-container .sc-list .sclt-item .scitem-right .scitem-action>span:hover {
+					color: rgba(198,84,76,1)!important
+			}
+		</style>
+		
+	
+		<!--交易曦游记人物切图  此处尚无图-->
+		<img style="display:none" src="../images/小智.png" alt>
+		<div id="J_container" class="box">
+			<div class="container">
+				<!--头部导航栏-->
+				<div class="header">
+					<div class="header-in clear">
+						<div class="logo">
+							<img src="../images/logo-要改暂用.png" alt="logo"/>
+							<span>交易曦游记</span>
+						</div>
+						<div class="login-box">
+							<div class="user-box">
+								<img src="../images/logo-要改暂用.png" alt class="user-pho">
+								<div class="user-nick">欢迎，木马</div>
+								<div class="pull"><!--我是下拉选项 可以用css画--></div>   
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--左侧内容栏-->
+				<div class="index-con clear">
+					<div class="left-con">
+						<div class="left-box">
+							<!--导航图-->
+							<div class="nav-box">
+								<div class="nav-con">
+									<img src="../images/banner.png" alt class="banner_m mobile">
+									<img src="../images/涂鸦.png" alt class="banner_pc">
+									<div class="banner"><img src="../images/钱.png" alt/></div>
+									<div class="banner1"><img src="../images/标题.png" alt/></div>
+									<div class="banner2"><img src="../images/小智.png" alt/></div>
+									<!---本是多张切图，暂时用一张代替-->
+								</div>
+							</div>
+							<!--视频栏-->
+							<div class="video-box">
+								<div class="video-top">
+									<div class="video-ti">
+											交易曦游记:记录真实交易员的人物纪实片
+									</div>
+								</div>
+								<div class="video-bor">
+									<!--分享图-->
+									<div class="video-share">
+										<img src="../images/分享.png" alt/>
+										<div class="video-share-txt">分享</div>
+										<div class="j-news-share"></div>
+									</div>
+									<!--
+									<video id="vedc" controls="controls" poster="../images/头像1.JPG" autoplay="autoplay">
+										<source id="veda" src="" type="video/mp4">
+									</video>
+									-->
+									
+									
+									<div id="video_div" style="text-align:center;"> 
+										<button onclick="playPause()">播放/暂停</button> 
+										<button onclick="toBig()">静音</button> 
+										<button onclick="toNormal()">循环</button> 
+										<button onclick="toSmall()">恢复</button> 
+										<video id="vedc" width="500" height="250" style="margin-top:15px;"> 
+											<source src="" type="video/mp4" /> 
+											您的浏览器不支持此HTML5 视频标签。 
+										</video> 
+									</div>
+									
+								</div>
+							</div>
+							<!--右边栏-->
+							<div id="you" class="panel-box right-wrap">
+								<!--右侧栏  交易员介绍栏-->
+								<div id="right-box" class="right-box" style="left: auto;">
+									<div class="right-bor">
+										<div class="right-title">
+											交易员人物介绍
+										</div>
+										<div class="right-in">
+											<div class="right-incon">
+												<div class="right-cc">
+													<div class="player-box">     <!--ul内的数据轮番遍历数据得到 先写死一个 图片路径为空-->
+														<ul class="clear">
+															<li class="act">
+																<img src="../images/头像1.jpg" alt>
+																<div class="player-name">
+																	<span class="player-namein">程序员
+																	<span class="j-introBtn mobile">
+																	</span>
+																	</span>
+																	<span class="player-s"></span>
+																	<!---->
+																</div>
+																<!---->
+															</li>
+							 <!--  ::after这是个啥 css中添加了伪类-->
+														</ul>
+														<!--给这个div绑定一个编号，分别为player0，player1，player2，对应ul中的人物-->
+														<div class="player-intro_m player0">
+															<div>
+																人员1的销售经验
+																<br>
+																人员1的职位
+															</div>
+															<!---->
+															<!---->
+															<!--添加了伪元素-->
+														</div>
+													</div>
+													
+													<div class="vote-box">
+														<div class="vote-top right-title">
+															本集话题讨论
+														</div>
+														<div class="vote-title">交易看起来简单，不外乎上涨下跌，交易员是赌徒吗？</div>
+														<ul class="vote-img clear">
+															<!--话题有多少个选项就渲染多少项-->
+															<li>
+																<div class="vote-img_bor">
+																	<div class="vote-name votebg_0">
+																		<div>
+																			<img src="../images/左边.png" />
+																		</div>
+																	</div>
+																	<div class="vote-txt">
+																		<div class="vote-btn">投&nbsp票</div>
+																		<div class="vote-count">
+																			已投
+																			<span>1100</span>
+																			票	
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div class="vote-img_bor">
+																	<div class="vote-name votebg_0">
+																		<div>
+																			<img src="../images/右边.png" />
+																		</div>
+																	</div>
+																	<div class="vote-txt">
+																		<div class="vote-btn">投&nbsp票</div>
+																		<div class="vote-count">
+																			已投<span>1520</span>票
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<!--伪类-->
+														</ul>
+													</div>
+													<!--参与投票，pc 和手机-->
+													<div class="draw-tips">
+														<img src="../images/Bitmap.png"/>
+													</div>
+													
+													<!--线下沙龙  动态渲染数据-->
+													<div class="hd-box">
+														<div class="vote-top right-title" style="width:90%;">
+															线下沙龙招募活动
+														</div>
+														<!--沙龙具体信息-->
+														<div class="hd-con">
+															<!--该块代码动态渲染进去---->
+															<span class="hd-txt">
+															交易简单看来，不外乎上涨下跌，赌博不外乎输赢，交易员是赌徒吗？交易简单看来，不外乎上涨下跌，赌博不外乎输赢，交易员是赌徒吗？
+															</span>
+															<!--详情链接-->
+															<a href="www.baidu.com" target="_blank" class="hd-detail-btn">活动信息</a>
+														</div>
+													</div>
+													
+													<!--二维码信息-->
+													<div class="right-btm">
+														<div class="right-btm-tips">加入《交易曦游记》大家庭吧！</div>
+														<div id="erweima" class="clear">
+															<img src="../images/二维码.png"  alt>
+															<div class="wechat-txt">
+																"交易曦游记"
+																<br />
+																微信号：jin10_domi
+															</div>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<!---->
+								</div>
+							</div>
+							
+							
+							<!--视频区  往期回顾列表-->
+							<div id="shipin" class="panel-box history-box" style="border-top: 1px solid #d9d2d2;">
+								<!--视频头-->
+								<div class="panel-ti clear">
+									<div class="ti-1"></div>   <!--小火箭  可用css画-->
+									<div class="ti-txt">往期回顾</div>
+									<div class="ti-r"></div>    <!--小箭头-->
+									<div class="more-btn">  <!--查看更多-->
+										<a target="_blank" href="www.baidu.com">查看更多</a>
+									</div>
+								</div>
+					<!---->
+								
+							<!--视频内容-->
+								<div class="history-list clear">
+									<div class="slick-box slick-initialized slick-slider">
+										<!--视频容器框-->
+										<div aria-live="polite" class="slick-list draggable">
+											<!--视频列表-->
+											<div class="slick-track" role="listbox" style="opacity: 1; 
+											transform: translate3d(0px, 0px, 0px);">
+											<!--第一个视频-->
+												<div class="video-in2 slick-slide slick-current slick-active act" 
+												  style="width: 208px;">
+													<div class="video-inbor">
+														<div class="vide-poster">
+															<!--视频一封面-->
+															<img id="shi1pic" src="../images/Bitmap.png" alt>
+															<button  style="width:38px; height:20px;text-align: center;" onclick="Shi1()">Click</button>
+														</div>
+														<!--视频1的说明-->
+														<div class="history-txt">
+															<!--此处应插入模拟数据的内容-->
+															<div id="shi1ti" class="history-title">八周交易计划2《我的信仰》</div>
+															<!--发布时间+评论数-->
+															 <div class="history-datas">
+																 <!--发布时间-->
+																 <span class="history-time">
+																	 <span id="shi1time">2018-11-28</span>
+																 </span>
+															</div>
+														</div>	
+													</div>
+												</div>
+												<!--第一个视频结束了-->	
+												<div class="video-in2 slick-slide slick-current slick-active act" 
+												  style="width: 208px;">
+													<div class="video-inbor">
+														<div class="vide-poster">
+															<!--视频一封面-->
+															<img  id="shi2pic" src="../images/右边.png" alt> 
+															<button  style="width:38px; height:20px;text-align: center;" onclick="Shi2()">Click</button>
+														</div>
+														<!--视频1的说明-->
+														<div class="history-txt">
+															<!--此处应插入模拟数据的内容-->
+															<div  id="shi2ti" class="history-title">第八集：谁是黑马</div>
+															<!--发布时间+评论数-->
+															 <div class="history-datas">
+																 <!--发布时间-->
+																 <span class="history-time">
+																	 <span id="shi2time">2018-11-28</span>
+																 </span>
+															</div>
+														</div>	
+													</div>
+												</div>
+													
+												<div class="video-in2 slick-slide slick-current slick-active act"  
+												  style="width: 208px;">
+													<div class="video-inbor">
+														<div class="vide-poster">
+															<!--视频一封面-->
+															<img id="shi3pic" src="../images/左边.png"  alt>
+															<button  style="width:38px; height:20px;text-align: center;" onclick="Shi3()">Click</button>
+														</div>
+														<!--视频1的说明-->
+														<div class="history-txt">
+															<!--此处应插入模拟数据的内容-->
+															<div id="shiti" class="history-title">我最棒！</div>
+															<!--发布时间+评论数-->
+															 <div class="history-datas">
+																 <!--发布时间-->
+																 <span class="history-time">
+																	 <span id="shi3time">2018-11-28</span>
+																 </span>
+															</div>
+														</div>	
+												</div>				
+																	
+											</div>
+										</div>
+		
+									</div>	
+								</div>
+						<!--视频内容结束-->
+							</div>
+						<!--往期回顾内容结束-->
+							</div>		
+							
+							<!--留言区 话题+留言-->
+							<div id="liuyan" class="panel-box" style="border-top: 1px solid #d9d2d2;">
+						<!--留言区标题-->
+						<div class="panel-ti clear">
+							<div class="ti-1"></div>
+							<div class="ti-text">留言区</div>
+							<div class="ti-r"></div>
+						</div>
+						<!--留言区-->
+						<div class="comment-box">
+							<!--留言区引言-->
+							<div class="comment-panel comment-tips" style="background:rgba(255,255,255,1); border-radius:12px;
+							border:2px solid rgba(180,160,160,1); vertical-align:middle;">
+								<!--引言小图标   可用CSS画出来-->
+								<div class="comment-tipsIcon" >
+									<img class="xyj-icon xyj-icon_huati" src="../images/logo-要改暂用.png">
+								</div>
+								<!--话题内容-->
+								<div class="comment-tipsTxt">--
+									交易简单看来，不外乎上涨下跌，赌博不外乎输赢。很多人看来，这两者都是很大风险的，但实际交易的风险就不可控了吗？
+								</div>
+							</div>
+							
+							<!--精选评论区-->
+							<div class="comment-panel">
+								<!--两个链接的小环-->
+								<div class="contact"></div>
+								<div class="contact right"></div>
+								<!--评论区-->
+								<div class="j-comments simpleCommetWrap" style="background:rgba(255,255,255,1); border-radius:23px;
+									border:2px solid rgba(180,160,160,1); margin-top=20px">
+									<!--登录注册-->
+									<div class="comment-login-container">
+										<span class="comment-login-container-message">
+											<i class="icon commentIconfont commentIcon-comment"></i>  <!--空i标签配合小图标来用-->
+											评论需要登录，您还没有登录
+										</span>
+										<span class="comment-login-container-action">
+											<a class="comment-login-container-login comment-login-container-action-login J_ucenter_register">
+												注册
+											</a>
+											<span class="comment-login-container-action-login J_uncenter_login">登录</span>
+										</span>
+									</div>
+									<!--最新评论区-->
+									<div class="scwrap-container">
+										<!--最新评论标题-->
+										<p class="sc-title">
+											最新评论(
+											<span class="sc-total">
+												2018<!--引用模拟数据-->
+											</span>
+											)
+										</p>
+										<!--评论列表    内部都评论的用户动态添加标签到评论区内-->
+										<ul class="sc-list">
+											<li class="sclt-item">
+												<!--头像-->
+												<div class="scitem-left">
+													<img src="../images/二维码.png">
+												</div>
+												<!--评论内容-->
+												<div class="scitem-right">
+													<div class="scitem-title">
+														花花
+														<!--我是时间-->
+														<span class="scitem-time">2018-11-02</span>
+													</div>
+													<div class="scitem-location">
+														<span class="scitem-city">北京</span>
+													</div>
+													<div class="scitem-comment">
+														都要越来越好这个样子
+													</div>
+													<div class="scitem-action">
+														<div title="点赞" class="scitem-reply-like">
+															<img class="zan" src="../images/点赞.png"/>
+															<span>23</span>
+														</div> 
+														<div class="btn-sc-reply">
+															<img class="icon commentIconfont commentIcon-reply" src="../images/评论.png"/>
+															<span>回复</span>
+														</div>
+													</div>
+												</div>
+												
+												<!--附加评论-->
+												<div class="scitem-right">
+													<div class="scitem-title">
+														美作
+														<!--我是时间-->
+														<span class="scitem-time">2019-11-02</span>
+													</div>
+													<div class="scitem-location">
+														<span class="scitem-city">北京</span>
+													</div>
+													<div class="scitem-comment">
+														陪你去看流星雨落在这地球上陪你去看流星雨落在这地球上陪你去看流星雨落在这地球上陪你去看流星雨落在这地球上
+													</div>
+													<div class="scitem-action">
+														<div title="点赞" class="scitem-reply-like">
+															<img class="zan" src="../images/点赞.png"/>
+															<span>23</span>
+														</div> 
+														<div class="btn-sc-reply">
+															<img class="icon commentIconfont commentIcon-reply" src="../images/评论.png"/>
+															<span>回复</span>
+														</div>
+													</div>
+												</div>
+											</li>
+											
+											<!--第二条评论-->
+											<li class="sclt-item">
+												<!--头像-->
+												<div class="scitem-left">
+													<img src="../images/logo-要改暂用.png">
+												</div>
+												<!--评论内容-->
+												<div class="scitem-right">
+													<div class="scitem-title">
+														不一样的我们
+														<!--我是时间-->
+														<span class="scitem-time">2018-11-02</span>
+													</div>
+													<div class="scitem-location">
+														<span class="scitem-city">北京</span>
+													</div>
+													<div class="scitem-comment">
+														再来看流星雨再来看流星雨再来看流星雨再来看流星雨再来看流星雨
+													</div>
+													<div class="scitem-action">
+														<div title="点赞" class="scitem-reply-like">
+															<img class="zan" src="../images/点赞.png"/>
+															<span>28</span>
+														</div> 
+														<div class="btn-sc-reply">
+															<img class="icon commentIconfont commentIcon-reply" src="../images/评论.png"/>
+															<span>回复</span>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+			<!---->
+						</div>     <!--left-box的结束标签-->
+					</div>       <!--left-con 的结束标签-->
+				</div>     <!--index-con的结束标签-->
+			</div>    <!--container的结束标签-->
+		</div>    <!---J-container的结束标签-->	
+
+		
+	
+	</body>
+</html>
